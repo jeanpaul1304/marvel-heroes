@@ -35,6 +35,7 @@ app.controller("MarvelHeroesController", ["$scope","$http","md5", function($scop
 		url2 += "&apikey=" + publicKey;
 		url2 += "&hash="+ hash;
 		url2 += "&ts="+ ts;
+		url2 += "&limit=20"
 		$http.get(url2)
 			.success(function(data) {
 				window.data = data;

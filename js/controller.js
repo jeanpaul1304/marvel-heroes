@@ -22,14 +22,14 @@ app.controller("MarvelHeroesController", ["$scope","$http","md5", function($scop
 	// var api = "7af24e68aa481da4009d0b734ac9626d";
 	// var url = "http://gateway.marvel.com:80/v1/public/characters?name=s&apikey=";
 	// url += api;
-	var url = "http://jsonplaceholder.typicode.com/posts"
+	var url = "https://jsonplaceholder.typicode.com/posts"
 
 	$scope.searchHero = function(){
 		var publicKey = "7af24e68aa481da4009d0b734ac9626d";
 		var privateKey = "25f19afb3830587d5f04e3d55f4e53c3fb1de299";
 		var ts = (+new Date);
 		var hash = md5.createHash(ts + privateKey + publicKey);
-		url2 = "http://gateway.marvel.com:80/v1/public/"
+		url2 = "https://gateway.marvel.com:80/v1/public/"
 		url2 += "characters?";
 		url2 += "nameStartsWith=" + $scope.heroName;
 		url2 += "&apikey=" + publicKey;

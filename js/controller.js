@@ -29,7 +29,7 @@ app.controller("MarvelHeroesController", ["$scope","$http","md5", function($scop
 		var privateKey = "25f19afb3830587d5f04e3d55f4e53c3fb1de299";
 		var ts = (+new Date);
 		var hash = md5.createHash(ts + privateKey + publicKey);
-		url2 = "https://gateway.marvel.com:80/v1/public/"
+		url2 = "https://gateway.marvel.com/v1/public/"
 		url2 += "characters?";
 		url2 += "nameStartsWith=" + $scope.heroName;
 		url2 += "&apikey=" + publicKey;
